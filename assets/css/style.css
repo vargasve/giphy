@@ -1,0 +1,88 @@
+
+  
+  .queryBtn:hover {
+    cursor: pointer;
+  }
+  
+  #addBtn {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  
+  #addBtn:hover {
+    cursor: pointer;
+  }
+  
+  #btnNameInput {
+    margin-top: 12%;
+    margin-bottom: 3%;
+    width: 20%;
+  }
+  
+  form{
+      position: inherit;
+  }
+
+  .responseImage {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 10px 10px;
+    border-radius: 5px;
+  }
+  
+  .responseImage:hover {
+    box-shadow: 5px 5px 15px rgb(168, 167, 167);
+    cursor: pointer;
+  }
+  
+  #results {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: url(../../assets/images/officeBackground.jpg)
+        no-repeat center fixed;
+    background-size: cover;
+  }
+
+  h1 {
+    position: center;
+    z-index: 50;
+    font-size: 100px;
+    font-family: "Impact", sans-serif;
+    color: black;
+
+  }
+
+  /* cell phone */
+  @media screen and (max-device-width: 480px) {
+    html {
+      width: 100vw;
+      height: 100vh;
+    }
+    body {
+      height: 120%;
+      width: 100vw;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 25px;
+      left: calc(50% - 170px);
+    }
+  
+    #btnContainer {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
