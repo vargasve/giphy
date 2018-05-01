@@ -1,17 +1,18 @@
-var cast = ["Michael", "Jim", "Pam", "Dwight"];
+var cast = ["michael", "pam", "jim", "dwight"];
 
 
  
-
+cast.forEach(function(element) {
+    $("#btnContainer").append(
+        "<button class='queryBtn'> <img src='assets/images/" + element + ".jpg'></button>"
+    );
+  });
+ 
  // add buttons from input, add text to buttons
  $("#addBtn").on("click", function(send) {
    send.preventDefault();
    $("#btnContainer").append(
-     "<button class='queryBtn' style='background:" +
-       $("#btnNameInput").val() +
-       "'>" +
-       $("#btnNameInput").val() +
-       "</button>"
+       "<button class='queryBtn'> <img src='assets/images/" + $("#btnNameInput").val() + ".jpg'></button>"
    );
    document.getElementById("btnNameInput").value = null;
    addEventListenerToBtns();
