@@ -15,7 +15,7 @@
   
   
   #results {
-    margin-top: 5%;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -33,12 +33,14 @@
   }
 
   h1 {
-    position: center;
+    position: center fixed;
     z-index: 50;
     font-size: 100px;
     font-family: "Impact", sans-serif;
     color: black;
     padding: auto;
+    line-height: .85;
+    
   }
 
   form{

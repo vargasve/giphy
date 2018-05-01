@@ -1,7 +1,5 @@
 var cast = ["michael", "pam", "jim", "dwight"];
 
-
- 
 cast.forEach(function(element) {
     $("#btnContainer").append(
         "<button class='queryBtn'> <img src='assets/images/" + element + ".jpg'></button>"
@@ -21,14 +19,15 @@ cast.forEach(function(element) {
  function addEventListenerToBtns() {
    $(".queryBtn").on("click", function buttonClick(btnEvent) {
      document.querySelector("#results").innerHTML = "";
-     var btnName = btnEvent.target.innerText;
+     var type = $(this).attr("data-type");
      var queryURL =
        "https://api.giphy.com/v1/gifs/search?q=" +
-       btnName +
-       "+the+office&api_key=WNS1CpPIB9EChLX4eBMBSgsrP34trBm0";
+       type +
+       "+the+office&api_key=WNS1CpPIB9EChLX4eBMBSgsrP34trBm0&limit=10";
+       console.log(type);
      $.ajax({
        url: queryURL,
-       method: "Get"
+       method: "GET"
      }).then(function(response) {
        response.data.forEach(function(image_object) {
          var responseImage = $("<img>")
