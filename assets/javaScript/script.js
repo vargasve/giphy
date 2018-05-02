@@ -2,7 +2,7 @@ var cast = ["michael", "pam", "jim", "dwight"];
 
 cast.forEach(function(element) {
     $("#btnContainer").append(
-        "<button class='queryBtn'> <img src='assets/images/" + element + ".jpg'></button>"
+        "<button class='queryBtn' data-type='" + element + "'> <img src='assets/images/" + element + ".jpg'></button>"
     );
   });
  
